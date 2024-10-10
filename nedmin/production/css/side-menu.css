@@ -1,0 +1,114 @@
+.side-menu {
+    width: 15%; /* Menü genişliği */
+    background-color: #4D72DE; /* Arka plan rengi */
+    color: #fff; /* Yazı rengi */
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    height: 100vh; /* Tam yükseklik */
+    position: fixed; /* Sabit konum */
+    overflow-y: auto; /* Dikey kaydırma */
+}
+
+.side-menu h2 {
+    padding: 20px 0; /* Üst ve alt boşluk */
+    margin: 0; /* Varsayılan margin kaldırıldı */
+}
+
+.side-menu p {
+    margin: 0; /* Varsayılan margin kaldırıldı */
+}
+
+.side-menu ul {
+    list-style-type: none; /* Madde işaretlerini kaldır */
+    padding: 0; /* Varsayılan padding kaldırıldı */
+}
+
+.side-menu li {
+    
+}
+
+.side-menu li a {
+    display: flex; /* Flexbox ile yatay hizalama */
+    align-items: center; /* Dikey ortalama */
+    padding: 15px; /* İçerik boşluğu */
+    text-decoration: none; /* Alt çizgi kaldır */
+    color: #fff; /* Yazı rengi */
+    transition: background-color 0.3s; /* Geçiş efekti */
+    margin: 5px 0px;
+}
+
+.side-menu li a:hover {
+    
+}
+
+.dropdown {
+    position: relative; /* Alt menü için konum */
+}
+
+/* Bu kısmı kaldırın: */
+
+
+.dropdown-content {
+    display: none; /* Başlangıçta gizli */
+    position: absolute; /* Konumlandırma */
+    background-color: #fff; /* Arka plan rengi */
+    min-width: 150px; /* En az genişlik */
+    z-index: 1; /* Katman önceliği */
+    margin-left: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.dropdown-content.show {
+    display: block; /* Tıklandığında görünür */
+}
+
+
+.dropdown-content a {
+    padding: 12px 15px; /* İçerik boşluğu */
+    text-decoration: none; /* Alt çizgi kaldır */
+    color: #000 !important; /* Yazı rengi */
+    display: block; /* Tam genişlik */
+}
+
+.dropdown-content a:hover {
+    
+}
+
+/* Mobil cihazlar için medya sorgusu */
+@media only screen and (max-width: 768px) {
+    .dropdown-content a span {
+        display: none;
+    }
+
+    .dropdown-content {
+        min-width: 10px !important;
+        margin-left: 3.5px !important;
+    }
+    
+    .side-menu li a {
+        justify-content: center; /* İkonları ortala */
+    }
+
+    .side-menu li a::before {
+        content: attr(data-icon); /* İkonlar için veri özniteliği */
+        font-size: 20px; /* İkon boyutu */
+        margin-right: 10px; /* İkon ile metin arasındaki boşluk */
+    }
+
+    .side-menu li a span {
+        display: none; /* Mobilde metinleri gizle */
+    }
+
+    .side-menu h2 span {
+        display: none; /* Mobilde metinleri gizle */
+    }
+
+    .side-menu p span {
+        display: none; /* Mobilde metinleri gizle */
+    }
+}
+
+.side-menu ul li a i {
+    margin-right: 10px; /* İkon ile metin arasına boşluk ekler */
+}

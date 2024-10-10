@@ -1,0 +1,133 @@
+/* Genel ayarlar */
+body {
+    font-family: Verdana !important;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Başlık */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Bağlantılar */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tablo stili */
+.table-responsive {
+    overflow-x: auto; /* Yatay kaydırma */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 0px;
+    overflow: hidden; /* Köşe yuvarlaması için */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    width: 200px;
+}
+
+/* Başlık hücreleri */
+th {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+/* Satır hover efekti */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Aktif ve Pasif durum renkleri */
+span {
+    font-weight: normal;
+}
+
+span[style*="green"] {
+    color: green;
+}
+
+span[style*="red"] {
+    color: red;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+    .table-responsive {
+        display: block; /* Tablonun responsive davranışını ayarlama */
+        width: 100%;
+        overflow-x: auto; /* Yatay kaydırma için */
+    }
+
+    th, td {
+        padding: 10px 5px;
+        text-align: center; /* Ortada hizalamak için */
+    }
+    
+    tr {
+        display: flex; /* Flexbox ile yan yana dizme */
+        justify-content: space-between; /* Alanı eşit dağıtma */
+        align-items: center; /* Yatayda ortalama */
+    }
+    
+    th {
+        background-color: #3498db;
+        color: white;
+        flex: 1; /* Eşit alan kaplaması için */
+    }
+    
+    td {
+        border-bottom: 1px solid #ddd;
+        flex: 1; /* Eşit alan kaplaması için */
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Kenar boşluklarını birleştirir */
+}
+
+th, td {
+    padding: 8px; /* İçerik ile kenar arasındaki boşluk */
+    text-align: left; /* Metin hizalaması */
+}
+
+td {
+    padding: 16px;
+}
+
+th {
+    background-color: #4D72DE; /* Başlık hücrelerinin arka plan rengi */
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .side-menu li a {
+        justify-content: center; /* İkonları ortala */
+    }
+
+    .side-menu li a i {
+        margin-right: 0; /* İkonların sağındaki boşluğu kaldır */
+    }
+
+    .side-menu li a span {
+        display: none; /* Menü yazılarını gizle */
+    }
+}

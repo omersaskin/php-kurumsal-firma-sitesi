@@ -1,0 +1,192 @@
+
+#container {
+  margin: 0 auto;
+  max-width: 890px;
+}
+p { text-align: center; }
+ .toggle, [id^=drop] {
+ display: none;
+}
+nav {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  z-index: 99;
+}
+
+#logo {
+  display: block;
+  padding: 0 30px;
+  float: left;
+  font-size: 16px;
+  line-height: 60px;
+}
+
+nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav ul {
+  float: left;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li {
+  margin: 0px;
+  display: inline-block;
+  float: left;
+  background-color: #fff;
+}
+
+nav a {
+  display: block;
+  padding: 0 16px;
+  color: #000;
+  font-size: 15px;
+  line-height: 60px;
+  text-decoration: none;
+}
+
+
+
+nav a:hover:not(.logoLink) { background-color: #54C4CB; color: #fff; }
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 60px;
+}
+
+nav ul li:hover > ul { display: inherit; }
+
+nav ul ul li {
+  width: 170px;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+
+nav ul ul ul li {
+  position: relative;
+  top: -60px;
+  left: 170px;
+}
+
+
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width : 768px) {
+
+#logo {
+  display: block;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  float: none;
+}
+
+nav { margin: 0; }
+
+.toggle + a,
+ .menu { display: none; }
+
+.toggle {
+  display: block;
+  background-color: #fff;
+  padding: 0 16px;
+  color: #000;
+  font-size: 16px;
+  font-weight:bold;
+  line-height: 60px;
+  text-decoration: none;
+  border: none;
+}
+
+
+
+[id^=drop]:checked + ul { display: block; }
+
+nav ul li {
+  display: block;
+  width: 100%;
+}
+
+nav ul ul .toggle,
+ nav ul ul a { padding: 0 40px; }
+
+nav ul ul ul a { padding: 0 80px; }
+
+nav a:hover,
+ nav ul ul ul a { background-color: #fff; color: #000; }
+
+nav ul li ul li .toggle,
+ nav ul ul a { background-color: #fff; color: #000; }
+
+nav ul ul {
+  float: none;
+  position: static;
+  color: #ffffff;
+}
+
+nav ul ul li:hover > ul,
+nav ul li:hover > ul { display: none; }
+
+nav ul ul li {
+  display: block;
+  width: 100%;
+}
+
+nav ul ul ul li { position: static;
+
+}
+}
+
+@media all and (max-width : 330px) {
+
+nav ul li {
+  display: block;
+  width: 94%;
+}
+
+}
+/* Alt kategorisi olan menü öğelerinde "+" işaretini göster */
+li:has(ul) > a:after {
+  content: ' >'; /* Alt kategorisi olan öğelerde "+" işareti */
+}
+
+/* Alt kategorisi olmayan menü öğelerinde "+" işaretini gizle */
+li:not(:has(ul)) > a:after {
+  content: ''; /* Alt kategorisi olmayan öğelerde "+" işareti gizleniyor */
+}
+#logo {
+  display: inline-block; /* Yüzen logo */
+  padding: 0 30px; /* Sol ve sağdan boşluk */
+  float: left; /* Sol tarafa hizala */
+  font-size: 20px; /* Yazı boyutu */
+  line-height: 60px; /* Yükseklik */
+  color: #000; /* Yazı rengi */
+  font-weight: bold; /* Kalın yazı */
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  z-index: 99;
+}
+
+@media all and (max-width: 768px) {
+  #logo {
+    width: 100%; /* Logo tam genişlikte olsun */
+    text-align: center; /* Merkeze hizala */
+    float: none; /* Yüzen özelliği kaldır */
+  }
+}

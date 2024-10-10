@@ -1,0 +1,80 @@
+/* Form konteyneri stili */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f8f9fa; /* Formun arka plan rengi */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto; /* Sayfanın ortasına hizalama */
+}
+
+/* Form başlığı */
+.form-container h2 {
+    text-align: center;
+    color: #343a40;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Label ve input alanları */
+label {
+    font-size: 14px;
+    color: #495057;
+    margin-bottom: 5px;
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 0px !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+    border: solid 1px #000 !important;
+}
+
+input[type="text"]:focus, textarea:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Textarea alanı */
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Buton stili */
+button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+button:hover {
+    background-color: #000;
+}
+
+/* Satır ve kolon düzenlemesi */
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.col-100 {
+    width: 100%;
+}
+
+input, textarea {
+    margin: 13px 0px !important;
+}
